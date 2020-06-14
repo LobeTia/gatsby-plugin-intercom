@@ -8,6 +8,8 @@ exports.onRenderBody = ({ setPostBodyComponents }, pluginOptions) => {
     return setPostBodyComponents([
       <script
         key={`gatsby-plugin-intercom`}
+        async
+        defer
         dangerouslySetInnerHTML={{
           __html: `
   var APP_ID = "${pluginOptions.appId}";
